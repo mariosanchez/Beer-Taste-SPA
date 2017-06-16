@@ -1,0 +1,2 @@
+current -> Beer Page component
+          
