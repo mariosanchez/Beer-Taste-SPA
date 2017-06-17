@@ -1,5 +1,5 @@
 import React from 'react';
-import BeerPreview from 'BeerPreview';
+import BeerPreview from './BeerPreview';
 import beers from '../data/beers';
 
 export default class IndexPage extends React.Component {

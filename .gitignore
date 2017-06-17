@@ -1,1 +1,3 @@
 node_modules
+src/static/js
+babel_cache
