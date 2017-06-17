@@ -7,5 +7,5 @@ export default class Glass extends React.Component {
         {this.props.name}
       </span>
     );
-  }
+    }
 }

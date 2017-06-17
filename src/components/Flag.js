@@ -17,8 +17,8 @@ const data = {
 
 export default class Flag extends React.Component {
   render() {
-    const name = data[this.propos.code].name;
-    const icon = data[this.propos.code].icon;
+    const name = data[this.props.code].name;
+    const icon = data[this.props.code].icon;
     return (
       <span className="flag">
         <img className="icon" title={name} src={`/img/${icon}`}/>
