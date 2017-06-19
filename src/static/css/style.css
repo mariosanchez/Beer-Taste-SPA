@@ -27,7 +27,6 @@ header .logo {
     display: block;
     margin: 0 auto;
     max-width: 400px;
-    width: 100%;
 }
 
 footer {
@@ -73,7 +72,7 @@ footer p {
     display: inline-block;
     margin: 0 1em 1em 0;
     max-width: 200px;
-    padding: 0;
+    padding: 1em;
     position: relative;
     width: 100%;
 }
@@ -96,18 +95,23 @@ footer p {
     width: 100%;
 }
 
-.home .beers-selector .beer-preview .medals-count {
-    background: #fff;
-    border-radius: 2px;
+.home .beers-selector .beer-preview .brewery {
+    color: #030303;
     display: inline-block;
-    font-weight: bold;
-    margin: .2em;
-    padding: .2em .4em;
-    position: absolute;
-    right: 0;
+    font-size: 1em;
+    overflow: hidden;
+    padding: .1em;
     text-align: center;
-    top: 0;
-    vertical-align: middle;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.home .beers-selector .beer-preview .picture {
+    background-size: contain !important;
+    width: 100%;
+    height: 200px;
 }
 
 nav.beers-menu {
@@ -143,11 +147,24 @@ nav.beers-menu a.active {
     background-size: cover;
     width: 100%;
     height: 200px;
+    filter: blur(20px);
+    overflow: hidden;
 }
 
 .beer .picture-container {
-    margin: -160px 0 0 0;
+    margin: -170px 0 0 0;
     padding: 0 1em 0 1em;
+}
+
+.beer .picture {
+    background-size: contain !important;
+    width: 250px;
+    height: 250px;
+    border: 8px white solid;
+    box-shadow: inset 0 0 10px #e8e8e8;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
 }
 
 .beer .picture-container img {
@@ -164,6 +181,7 @@ nav.beers-menu a.active {
     font-size: 3em;
     padding: 0 0 0 .5em;
     width: auto;
+    text-align: center;
 }
 
 .beer .flag .icon {
@@ -173,46 +191,30 @@ nav.beers-menu a.active {
 }
 
 .beer .description,
-.beer .medals {
+.beer .info,
+.beer .glasses {
     font-size: 1.6em;
     padding: 1em;
+    text-align: justify;
 }
 
-.beer .medals p {
-    font-size: 1em;
+.beer .glasses {
+    padding: 0 1em 0 1em;
 }
 
-.beer .medals li {
-    list-style: none;
+.beer .glasses ul {
+    padding: 0;
+    margin: 0.5em 0;
 }
 
-.beer .medals .symbol {
-    border-radius: 50%;
-    display: inline-block;
-    font-size: .8em;
-    height: 1.6em;
-    justify-content: center;
-    margin: 5px;
-    text-align: center;
-    width: 1.6em;
-}
-
-.beer .medals .symbol.symbol-G {
-    color: #daa520;
-    background-color: #fff6de;
-    border: 2px solid #daa520;
-}
-
-.beer .medals .symbol.symbol-S {
-    color: #383738;
-    background-color: #b9b5b5;
-    border: 2px solid #383738;
-}
-
-.beer .medals .symbol.symbol-B {
-    color: #6b1919;
-    background-color: #ea96a1;
-    border: 2px solid #6E1924;
+.beer .glasses .glass {
+    background: #bdbcbc;
+    padding: 0.6em;
+    color: #FFF;
+    text-shadow: 1px 1px 1px #7d7d7d;
+    margin-right: 10px;
+    border-radius: 3px;
+    font-size: 10pt;
 }
 
 .navigateBack {

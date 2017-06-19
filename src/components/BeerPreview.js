@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import BeerPicture from './BeerPicture';
 
 export const BeerPreview = props => (
   <Link to={`/beer/${props.id}`}>
     <div className="beer-preview">
-      <img src={`${props.picture}`} />
+      <BeerPicture picture={props.picture} />
       <h2 className="name">{props.name}</h2>
-      <span className="brewery">{props.brewery}</span>
+      <h3 className="brewery">{props.brewery}</h3>
     </div>
   </Link>
 );

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import BeerMenu from './BeersMenu';
 import Glass from './Glass';
 import Flag from './Flag';
+import BeerPicture from './BeerPicture';
 
 export const BeerPage = ({ beer, beers }) => {
   const headerStyle = { backgroundImage: `url(${beer.picture})` };
@@ -12,7 +13,7 @@ export const BeerPage = ({ beer, beers }) => {
         <div className="beer">
           <header style={headerStyle}/>
           <div className="picture-container">
-            <img src={`${beer.picture}`}/>
+            <BeerPicture picture={beer.picture} />
             <h2 className="name">{beer.name}</h2>
           </div>
           <section className="info">
@@ -24,7 +25,8 @@ export const BeerPage = ({ beer, beers }) => {
               <li>abv: {beer.abv}</li>
             </ul>
           </section>
-          <section className="glass">
+          <section className="glasses">
+            <span>Glass:</span>
             <ul>
               {beer.glass.map((glass, i) => <Glass key={i} {...glass}/>)}
             </ul>
@@ -33,7 +35,7 @@ export const BeerPage = ({ beer, beers }) => {
             {beer.description}
           </section>
         </div>
-        <div>
+        <div className="navigateBack">
           <Link to="/"> ← Back to the index </Link>
         </div>
       </div>
