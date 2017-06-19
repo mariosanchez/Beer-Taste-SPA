@@ -1,14 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
-export default class BeerPreview extends React.Component {
-  render() {
-    return (
-      <Link to={`/beer/${this.props.id}`}>
-        <img src={`${this.props.picture}`} />
-        <h2 className="name">{this.props.name}</h2>
-        <span className="brewery">{this.props.brewery}</span>
-      </Link>
-    );
-  }
-}
+export const BeerPreview = props => (
+  <Link to={`/beer/${props.id}`}>
+    <div className="beer-preview">
+      <img src={`${props.picture}`} />
+      <h2 className="name">{props.name}</h2>
+      <span className="brewery">{props.brewery}</span>
+    </div>
+  </Link>
+);
+
+export default BeerPreview;

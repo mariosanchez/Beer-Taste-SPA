@@ -5,8 +5,14 @@ const beers = [
     picture: "https://res.cloudinary.com/ratebeer/image/upload/w_120,c_limit/beer_189363.jpg",
     brewery: "Beavertown Brewery",
     style: "American Pale Ale",
-    location: "Tottenham, England",
-    country: "en",
+    location: {
+      city: "Tottenham",
+      country: {
+        id: 'en',
+        name: 'England',
+        icon: 'England.png',
+      }
+    },
     glass: [
         { name : "Lager glass" },
         { name : "Shaker" },
@@ -22,8 +28,14 @@ const beers = [
     picture: "https://res.cloudinary.com/ratebeer/image/upload/w_120,c_limit/beer_297901.jpg",
     brewery: "Brewski",
     style: "Imperial IPA",
-    location: "Helsingborg, Sweden",
-    country: "sw",
+    location: {
+      city: "Helsingborg",
+      country: {
+        id: 'sw',
+        name: 'Sweden',
+        icon: 'Sweden.png',
+      }
+    },
     glass: [
         { name : "Shaker" },
         { name : "Snifter" },
@@ -38,8 +50,14 @@ const beers = [
     picture: "https://res.cloudinary.com/ratebeer/image/upload/w_120,c_limit/beer_466607.jpg",
     brewery: "Naparbier",
     style: "Double IPA",
-    location: "Noain, Spain",
-    country: "es",
+    location: {
+      city: "Noain",
+      country: {
+        id: 'es',
+        name: 'Spain',
+        icon: 'Spain.png',
+      }
+    },
     glass: [
         { name : "Shaker" },
         { name : "Snifter" },
@@ -54,8 +72,14 @@ const beers = [
     picture: "https://res.cloudinary.com/ratebeer/image/upload/w_120,c_limit/beer_421344.jpg",
     brewery: "O/O",
     style: "Imperial IPA",
-    location: "Göteborg, Sweden",
-    country: "sw",
+    location: {
+      city: "Göteborg",
+      country: {
+        id: 'sw',
+        name: 'Sweden',
+        icon: 'Sweden.png',
+      }
+    },
     glass: [
         { name : "Shaker" },
         { name : "Snifter" },

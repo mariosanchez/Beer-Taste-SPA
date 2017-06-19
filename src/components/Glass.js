@@ -1,11 +1,9 @@
 import React from 'react';
 
-export default class Glass extends React.Component {
-  render() {
-    return (
-      <span className="glass">
-        {this.props.name}
-      </span>
-    );
-    }
-}
+export const Glass = props => (
+    <span className="glass">
+      {props.name}
+    </span>
+)
+
+export default Glass;
